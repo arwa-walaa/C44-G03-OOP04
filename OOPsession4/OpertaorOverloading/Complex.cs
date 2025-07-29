@@ -76,6 +76,18 @@ namespace OOPsession4.OpertaorOverloading
         }
         #endregion
 
+        #region Casting Operator Overloading
+        public static explicit operator int(Complex c)
+        {
+            return c?.Real ?? 0;
+        }
+
+        public static implicit operator string(Complex c)
+        {
+            return c?.ToString()?? string.Empty;
+        }
+      
+        #endregion
 
     }
 }

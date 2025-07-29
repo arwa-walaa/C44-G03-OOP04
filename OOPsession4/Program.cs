@@ -51,20 +51,30 @@ namespace OOPsession4
             //Console.WriteLine(c4);
             //c3++;
             //Console.WriteLine(c3);
-            if(c1>c2)
-            {
-                Console.WriteLine("c1 is greater than c2");
-            }
-            else if(c1<c2)
-            {
-                Console.WriteLine("c2 is greater than c1");
-            }
-            else
-            {
-                Console.WriteLine("c1 is equal to c2");
-            }
+            //if(c1>c2)
+            //{
+            //    Console.WriteLine("c1 is greater than c2");
+            //}
+            //else if(c1<c2)
+            //{
+            //    Console.WriteLine("c2 is greater than c1");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("c1 is equal to c2");
+            //}
 
             #endregion
+            #region Casting Operator Overloading
+            Complex c5 = new Complex() { Real = 2, Imaginary = 3 };
+           
+            int Y = (int)c5 ; // Implicit conversion from Complex to int
+            //recomended to use explicit conversion
+            string str =c5;
+            Console.WriteLine( str);
+            #endregion
+
         }
+
     }
 }
