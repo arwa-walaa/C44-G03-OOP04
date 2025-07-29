@@ -75,14 +75,22 @@ namespace OOPsession4
             #endregion
 
             #region static Class
-           
-            Console.WriteLine(Helper.CmToInch(30));
-            Console.WriteLine(Helper.calacCircleArea(20));
+
+            //Console.WriteLine(Helper.CmToInch(30));
+            //Console.WriteLine(Helper.calacCircleArea(20));
             //Helper helper = new Helper(10, 20);
             //Console.WriteLine( helper.CmToInch(12));
             //Console.WriteLine(helper.calacCircleArea(5));
 
             #endregion
+            #region Sealed Class
+            //Parent parent = new Parent();
+            ////parent.salary = 1000;
+            //parent.Print();
+
+            #endregion
+
+
 
         }
 
