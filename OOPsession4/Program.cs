@@ -91,18 +91,56 @@ namespace OOPsession4
             #endregion
 
             #region Paritail Class
-            Employee employee = new Employee()
-            {
-                id = 1,
-                name = "John Doe",
-                age = 30,
-                salary = 50000,
-                CompanyName = "Tech Corp",
-                ourRate = "Hourly"
-            };
+            //Employee employee = new Employee()
+            //{
+            //    id = 1,
+            //    name = "John Doe",
+            //    age = 30,
+            //    salary = 50000,
+            //    CompanyName = "Tech Corp",
+            //    ourRate = "Hourly"
+            //};
 
 
             #endregion
+
+            #region Deep & Shallow Copy
+
+            //int[] Arr1 = {1, 2, 3 };
+            //int[] Arr2 = { 4, 5, 6 };//sallow copy
+
+            //Console.WriteLine($"Arr1 : {Arr1.GetHashCode()}");
+            //Console.WriteLine($"Arr2 : {Arr2.GetHashCode()}");
+
+            //Arr2 = Arr1;
+            //Console.WriteLine($"Arr1 : {Arr1.GetHashCode()}");
+            //Console.WriteLine($"Arr2 : {Arr2.GetHashCode()}");
+
+            //Arr1[0] = 10;
+            //Console.WriteLine($"Arr2[0] : {Arr2[0]}");
+
+
+            //deep copy
+            int[] Arr1 = { 1, 2, 3 };
+            int[] Arr2 = { 4, 5, 6 };
+            Console.WriteLine($"Arr1 : {Arr1.GetHashCode()}");
+            Console.WriteLine($"Arr2 : {Arr2.GetHashCode()}");
+
+            Arr2 = (int[])Arr1.Clone();
+
+            Arr1[0] = 10;
+           foreach (var item in Arr2)
+            {
+                Console.WriteLine(item);
+            }
+           foreach (var item in Arr1)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            #endregion
+
 
         }
 
