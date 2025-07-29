@@ -66,12 +66,22 @@ namespace OOPsession4
 
             #endregion
             #region Casting Operator Overloading
-            Complex c5 = new Complex() { Real = 2, Imaginary = 3 };
+            //Complex c5 = new Complex() { Real = 2, Imaginary = 3 };
+
+            //int Y = (int)c5 ; // Implicit conversion from Complex to int
+            ////recomended to use explicit conversion
+            //string str =c5;
+            //Console.WriteLine( str);
+            #endregion
+
+            #region static Class
            
-            int Y = (int)c5 ; // Implicit conversion from Complex to int
-            //recomended to use explicit conversion
-            string str =c5;
-            Console.WriteLine( str);
+            Console.WriteLine(Helper.CmToInch(30));
+            Console.WriteLine(Helper.calacCircleArea(20));
+            //Helper helper = new Helper(10, 20);
+            //Console.WriteLine( helper.CmToInch(12));
+            //Console.WriteLine(helper.calacCircleArea(5));
+
             #endregion
 
         }
