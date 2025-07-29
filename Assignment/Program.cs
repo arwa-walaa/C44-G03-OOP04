@@ -27,7 +27,12 @@
             //Console.WriteLine(c1 - c2);
             #endregion
 
-
+            #region Q4: Employee and Manager with method overriding
+            //Employee emp = new Employee();
+            //emp.Work(); 
+            //Manager mgr = new Manager();
+            //mgr.Work();
+            #endregion
 
         }
     }
