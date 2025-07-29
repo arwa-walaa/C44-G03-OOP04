@@ -90,7 +90,19 @@ namespace OOPsession4
 
             #endregion
 
+            #region Paritail Class
+            Employee employee = new Employee()
+            {
+                id = 1,
+                name = "John Doe",
+                age = 30,
+                salary = 50000,
+                CompanyName = "Tech Corp",
+                ourRate = "Hourly"
+            };
 
+
+            #endregion
 
         }
 
