@@ -14,6 +14,7 @@ namespace Assignment
         public int Hours { get; set; }
         public int Minutes { get; set; }
         public int Seconds { get; set; }
+        public int TotalSeconds => Hours * 3600 + Minutes * 60 + Seconds;
 
         #endregion
 
@@ -55,6 +56,7 @@ namespace Assignment
             Hours = hours;
             Minutes = minutes;
             Seconds = seconds;
+            Normalize();
         }
 
     
@@ -65,6 +67,82 @@ namespace Assignment
             Minutes = totalSeconds / 60;
             Seconds = totalSeconds % 60;
         }
+        #endregion
+
+        #region Part2 Q4
+        private void Normalize()
+        {
+            Minutes += Seconds / 60;
+            Seconds %= 60;
+            if (Seconds < 0)
+            {
+                Seconds += 60;
+                Minutes--;
+            }
+
+            Hours += Minutes / 60;
+            Minutes %= 60;
+            if (Minutes < 0)
+            {
+                Minutes += 60;
+                Hours--;
+            }
+        }
+
+        public static Duration operator +(Duration d1, Duration d2)
+        {
+            return new Duration(
+                d1.Hours + d2.Hours,
+                d1.Minutes + d2.Minutes,
+                d1.Seconds + d2.Seconds);
+        }
+
+        public static Duration operator +(Duration d, int seconds)
+        {
+            return d + new Duration(seconds);
+        }
+
+        public static Duration operator +(int seconds, Duration d)
+        {
+            return d + seconds;
+        }
+
+        public static Duration operator -(Duration d1, Duration d2)
+        {
+            return new Duration(
+                d1.Hours - d2.Hours,
+                d1.Minutes - d2.Minutes,
+                d1.Seconds - d2.Seconds);
+        }
+
+        public static Duration operator ++(Duration d)
+        {
+            // Create new object with modified values
+            return new Duration(d.Hours, d.Minutes + 1, d.Seconds);
+        }
+
+        public static Duration operator --(Duration d)
+        {
+            // Create new object with modified values
+            return new Duration(d.Hours, d.Minutes - 1, d.Seconds);
+        }
+
+        public static bool operator >(Duration d1, Duration d2) => d1.TotalSeconds > d2.TotalSeconds;
+        public static bool operator <(Duration d1, Duration d2) => d1.TotalSeconds < d2.TotalSeconds;
+        public static bool operator >=(Duration d1, Duration d2) => d1.TotalSeconds >= d2.TotalSeconds;
+        public static bool operator <=(Duration d1, Duration d2) => d1.TotalSeconds <= d2.TotalSeconds;
+        public static bool operator true(Duration d) => d.TotalSeconds != 0;
+        public static bool operator false(Duration d) => d.TotalSeconds == 0;
+
+        public static explicit operator DateTime(Duration d)
+        {
+            DateTime now = DateTime.Now;
+            return new DateTime(now.Year, now.Month, now.Day, d.Hours, d.Minutes, d.Seconds);
+        }
+
+
+
+
         #endregion
 
     }
