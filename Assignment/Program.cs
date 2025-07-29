@@ -12,13 +12,21 @@
             #endregion
 
             #region Q2: Rectangle with multiple constructors
-            Rectangle rect1 = new Rectangle(); 
-            Rectangle rect2 = new Rectangle(5, 10);
-            Rectangle rect3 = new Rectangle(7); 
-            Console.WriteLine($"Rect1: Width = {rect1.Width}, Height = {rect1.Height}");
-            Console.WriteLine($"Rect2: Width = {rect2.Width}, Height = {rect2.Height}"); 
-            Console.WriteLine($"Rect3: Width = {rect3.Width}, Height = {rect3.Height}");
+            //Rectangle rect1 = new Rectangle(); 
+            //Rectangle rect2 = new Rectangle(5, 10);
+            //Rectangle rect3 = new Rectangle(7); 
+            //Console.WriteLine($"Rect1: Width = {rect1.Width}, Height = {rect1.Height}");
+            //Console.WriteLine($"Rect2: Width = {rect2.Width}, Height = {rect2.Height}"); 
+            //Console.WriteLine($"Rect3: Width = {rect3.Width}, Height = {rect3.Height}");
             #endregion
+
+            #region Q3: Complex Number with operator overloading
+            //Complex c1 = new Complex(3, 4);
+            //Complex c2 = new Complex(1, 2);
+            //Console.WriteLine(c1 + c2);
+            //Console.WriteLine(c1 - c2);
+            #endregion
+
 
 
         }
