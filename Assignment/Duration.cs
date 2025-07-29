@@ -8,19 +8,22 @@ namespace Assignment
 {
     internal class Duration
     {
+
+        #region Part2 Q1
         // Attributes
         public int Hours { get; set; }
         public int Minutes { get; set; }
         public int Seconds { get; set; }
 
+        #endregion
 
-        // 1. Override ToString() to display duration in HH:MM:SS format
+        #region Part2 Q2
         public override string ToString()
         {
             return $"{Hours:D2}:{Minutes:D2}:{Seconds:D2}";
         }
 
-        // 2. Override Equals() for value equality comparison
+     
         public override bool Equals(object obj)
         {
   
@@ -30,7 +33,7 @@ namespace Assignment
                    Seconds == other.Seconds;
         }
 
-        // 3. Override GetHashCode() to maintain hash contract with Equals()
+       
         public override int GetHashCode()
         {
             unchecked // Overflow is fine
@@ -42,6 +45,27 @@ namespace Assignment
                 return hash;
             }
         }
+
+        #endregion
+
+        #region Part2 Q3
+
+        public Duration(int hours, int minutes, int seconds)
+        {
+            Hours = hours;
+            Minutes = minutes;
+            Seconds = seconds;
+        }
+
+    
+        public Duration(int totalSeconds)
+        {
+            Hours = totalSeconds / 3600;
+            totalSeconds %= 3600;
+            Minutes = totalSeconds / 60;
+            Seconds = totalSeconds % 60;
+        }
+        #endregion
 
     }
 }

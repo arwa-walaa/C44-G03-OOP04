@@ -35,12 +35,12 @@
             #endregion
 
             #region Q5: BaseClass with override vs new
-            BaseClass baseObj = new BaseClass();
-            baseObj.DisplayMessage(); // Output: Message from BaseClass
-            DerivedClass1 derivedObj1 = new DerivedClass1();
-            derivedObj1.DisplayMessage(); // Output: Message from DerivedClass1 (override)
-            DerivedClass2 derivedObj2 = new DerivedClass2();
-            derivedObj2.DisplayMessage(); // Output: Message from DerivedClass2 (new)
+            //BaseClass baseObj = new BaseClass();
+            //baseObj.DisplayMessage(); // Output: Message from BaseClass
+            //DerivedClass1 derivedObj1 = new DerivedClass1();
+            //derivedObj1.DisplayMessage(); // Output: Message from DerivedClass1 (override)
+            //DerivedClass2 derivedObj2 = new DerivedClass2();
+            //derivedObj2.DisplayMessage(); // Output: Message from DerivedClass2 (new)
 
             /*
              Difference between override and new
@@ -48,6 +48,23 @@
                 - `new` hides a method in the base class with a new implementation in the derived class, but does not override it.
              
              */
+
+            #endregion
+
+            #region part2 Q3
+
+           // Duration D1 = new Duration(1, 10, 15);
+           //Console.WriteLine( D1.ToString());
+
+           // Duration D4 = new Duration(3600);
+           // Console.WriteLine(D4.ToString());
+
+           // Duration D2 = new Duration(7800);
+           // Console.WriteLine(D2.ToString());
+
+           // Duration D3 = new Duration(666);
+           // Console.WriteLine(D3.ToString());
+
 
             #endregion
 
