@@ -34,6 +34,23 @@
             //mgr.Work();
             #endregion
 
+            #region Q5: BaseClass with override vs new
+            BaseClass baseObj = new BaseClass();
+            baseObj.DisplayMessage(); // Output: Message from BaseClass
+            DerivedClass1 derivedObj1 = new DerivedClass1();
+            derivedObj1.DisplayMessage(); // Output: Message from DerivedClass1 (override)
+            DerivedClass2 derivedObj2 = new DerivedClass2();
+            derivedObj2.DisplayMessage(); // Output: Message from DerivedClass2 (new)
+
+            /*
+             Difference between override and new
+                - `override` allows a derived class to provide a specific implementation of a method that is already defined in its base class.
+                - `new` hides a method in the base class with a new implementation in the derived class, but does not override it.
+             
+             */
+
+            #endregion
+
         }
     }
 }
